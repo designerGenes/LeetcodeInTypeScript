@@ -11,7 +11,7 @@
  * [3,2,4], 6 = [1, 2]
  */
 
-function twoSum(nums: number[], target: number): number[] {
+export const twoSum = (nums: number[], target: number): number[] => {
   // [0, 1, 4, 3, 2], 7
 
   let l = 0;
@@ -27,16 +27,15 @@ function twoSum(nums: number[], target: number): number[] {
   }
 
   return [];
-}
+};
 
-function fasterTwoSum(nums: number[], target: number): number[] {
+export const fasterTwoSum = (nums: number[], target: number): number[] => {
   let dictMap = {};
   for (let x in nums) {
     const key = nums[x];
     const distance = target - nums[x];
 
     if (dictMap[distance] !== undefined) {
-      console.log(`distance of ${distance}`);
       return [x, dictMap[distance].idx];
     }
 
@@ -51,7 +50,4 @@ function fasterTwoSum(nums: number[], target: number): number[] {
   }
 
   return [];
-}
-
-console.log(`We begin!`);
-console.log(fasterTwoSum([0, 1, 2, 3, 4, 5, 6], 8));
+};

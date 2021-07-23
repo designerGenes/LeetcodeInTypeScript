@@ -1,7 +1,3 @@
-// from array of numbers, return the largest ascending sequence
-
-let x = [0, 1, 2, 5, 1, 3, 2, 4, 6, 7, 9, 3, 10, 12, 1];
-
 const splitIntoSequences = (arr: number[]): Array<number[]> => {
   let sequences: Array<number[]> = [];
 
@@ -24,7 +20,7 @@ const splitIntoSequences = (arr: number[]): Array<number[]> => {
   return sequences;
 };
 
-const largestAscendingSequence = (arr: number[]): number[] => {
+export default (arr: number[]): number[] => {
   let sequences = splitIntoSequences(arr);
 
   // find biggest
