@@ -1,6 +1,21 @@
 // Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
 
-function maxSubArray(nums: number[], callback: () => void): number {
+function maxSubArray(nums: number[]): number {
+    let localMax = 0;
+    let globalMax = 0;
+    for (let x = 0; x < nums.length; x++) {
+        localMax = localMax + nums[x];
+        if (globalMax < localMax) {
+            globalMax = localMax
+        }
+        if (localMax < 0) {
+            localMax = 0
+        }
+    }
+    return globalMax;
+}
+
+function _maxSubArray(nums: number[], callback: () => void): number {
     let sequences: number[] = [];
     for (let c = 0; c < nums.length; c++) {
         let lSums = [];
@@ -61,4 +76,4 @@ const callback = (startTime) => {
 
 // console.log(maxSubArray(arrTwo, () => callback(process.hrtime())));
 // console.log(maxSubArray(arrThree, () => callback(process.hrtime())));
-console.log(maxSubArray(arrOne, () => callback(process.hrtime())));
+// console.log(maxSubArray(arrOne, () => callback(process.hrtime())));
