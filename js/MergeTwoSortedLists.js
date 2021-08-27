@@ -46,6 +46,8 @@ export function mergeTwoLists(l1, l2) {
         return rHead;
     if (rHead == null && lHead != null)
         return lHead;
+    if (rHead == null && lHead == null)
+        return null;
     if (lHead.val > rHead.val) {
         outRoot = rHead;
         rHead = outRoot.next;
@@ -144,14 +146,4 @@ export const makeJumpyArr = (size, startVal, arr) => {
     arr.push(newVal);
     return makeJumpyArr(size, startVal, arr);
 };
-const arr1 = [0]; //makeJumpyArr(20);
-const arr2 = []; //makeJumpyArr(10, 5);
-console.log(`arr1: ${arr1}`);
-console.log(`arr2: ${arr2}`);
-const root1 = makeList(arr1);
-const root2 = makeList(arr2);
-console.log(root1 != null ? root1.detail() : "No Root 1");
-console.log(root2 != null ? root2.detail() : "No Root 2");
-let mergedRoot = mergeTwoLists(root1, root2);
-console.log(mergedRoot.detail());
 //# sourceMappingURL=MergeTwoSortedLists.js.map
