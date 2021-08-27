@@ -1,0 +1,23 @@
+{
+    "name": "leetcode",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "type": "module",
+    "dependencies": {
+        "@types/node": "^16.7.1"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/designerGenes/LeetcodeInTypescript.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/designerGenes/LeetcodeInTypescript/issues"
+    },
+    "homepage": "https://github.com/designerGenes/LeetcodeInTypescript#readme"
+}
