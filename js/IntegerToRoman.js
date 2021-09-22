@@ -19,7 +19,7 @@ const numberAsComponents = (rawInt) => {
             components.push(digit);
             continue;
         }
-        let multip = 10 ** (stringOfOriginal.length - 1 - y);
+        let multip = Math.pow(10, (stringOfOriginal.length - 1 - y));
         components.push(digit * multip);
     }
     components.reverse();
